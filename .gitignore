@@ -1,0 +1,8 @@
+# Misc
+*~
+.#*
+.DS_Store
+*.sw[op]
+
+/build
+/output
