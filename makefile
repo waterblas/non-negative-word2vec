@@ -4,16 +4,19 @@ CFLAGS = -lm -pthread -O3 -march=native -Wall -funroll-loops -Wno-unused-result
 
 BUILDDIR := bin
 SRCDIR := src
+ORIGIN := baseline
 
-all: dir single double distance
+all: dir single double distance analogy
 dir :
 	mkdir -p $(BUILDDIR)
-single2vec : $(SRCDIR)/single2vec.c
+single : $(SRCDIR)/single2vec.c
 	$(CC) $(SRCDIR)/single2vec.c -o $(BUILDDIR)/single2vec $(CFLAGS)
-double2vec : $(SRCDIR)/double2vec.c
-	$(CC) $(SRCDIR)/double2vec.c -o $(BUILDDIR)/double22vec $(CFLAGS)
-distance : $(SRCDIR)/distance.c
-	$(CC) $(SRCDIR)/distance.c -o $(BUILDDIR)/distance $(CFLAGS)
+double : $(SRCDIR)/double2vec.c
+	$(CC) $(SRCDIR)/double2vec.c -o $(BUILDDIR)/double2vec $(CFLAGS)
+distance : $(ORIGIN)/distance.c
+	$(CC) $(ORIGIN)/distance.c -o $(BUILDDIR)/distance $(CFLAGS)
+analogy : $(ORIGIN)/compute-accuracy.c
+	$(CC) $(ORIGIN)/compute-accuracy.c -o $(BUILDDIR)/compute-accuracy $(CFLAGS)
 
 clean:
 	rm -rf bin
