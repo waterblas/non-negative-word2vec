@@ -1,0 +1,296 @@
+: Command
+time ./bin/single2vec -train text8 -output ./output/1.vectors.bin -cbow 1 -size 200 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
+
+: Time
+Alpha: 0.000005  Progress: 100.10%  Words/thread/sec: 76.21k
+real    55m15.885s
+user    54m56.612s
+sys     0m2.641s
+
+: Distance
+Enter word or sentence (EXIT to break): apple
+
+Word: apple  Position in vocabulary: 1221
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                               mac        0.887437
+                                             amiga        0.873168
+                                         macintosh        0.868616
+                                         microsoft        0.851529
+                                                os        0.845202
+                                         commodore        0.842106
+                                                pc        0.828330
+                                          software        0.819627
+                                               rom        0.818264
+                                                cd        0.816847
+                                               ibm        0.815670
+                                             atari        0.813561
+                                               bsd        0.811073
+                                           desktop        0.807496
+                                          versions        0.800771
+                                           scratch        0.797019
+                                             shell        0.795901
+                                        generation        0.793298
+                                           windows        0.791521
+                                              bill        0.785075
+                                               boy        0.783373
+                                          existing        0.782723
+                                       replacement        0.782490
+                                             clone        0.779062
+                                              disk        0.778380
+                                          monopoly        0.777986
+                                         shareware        0.770804
+                                             excel        0.770056
+                                            luthor        0.768195
+                                              logo        0.767616
+                                     automatically        0.763637
+                                             patch        0.763617
+                                           version        0.763460
+                                            mattel        0.762467
+                                                 x        0.762392
+                                          garfield        0.762017
+                                             proto        0.760201
+                                            marvel        0.757806
+                                           borland        0.757009
+                                             rolls        0.756372
+Enter word or sentence (EXIT to break): france
+
+Word: france  Position in vocabulary: 303
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                             spain        0.906121
+                                       netherlands        0.901420
+                                           belgium        0.870718
+                                           britain        0.840393
+                                           ireland        0.836782
+                                            canada        0.834765
+                                          portugal        0.824728
+                                            philip        0.820264
+                                            quebec        0.818379
+                                           denmark        0.807883
+                                             italy        0.804106
+                                          flanders        0.802591
+                                           ontario        0.802077
+                                                le        0.797705
+                                              rest        0.790712
+                                                de        0.787474
+                                           austria        0.784047
+                                       switzerland        0.779560
+                                             parts        0.778640
+                                              cuba        0.778511
+                                           holland        0.776382
+                                            pierre        0.776317
+                                             power        0.773515
+                                             louis        0.772611
+                                            norway        0.770357
+                                         argentina        0.766911
+                                             palma        0.762978
+                                                vi        0.759561
+                                            french        0.758100
+                                               ren        0.757984
+                                            speech        0.757818
+                                              lady        0.757000
+                                           germany        0.756633
+                                            george        0.755595
+                                           jacques        0.755526
+                                           england        0.754556
+                                          pressure        0.752379
+                                           charles        0.751593
+                                           country        0.750163
+                                          napoleon        0.748248
+
+: Analogy
+capital-common-countries:
+ACCURACY TOP1: 7.51 %  (38 / 506)
+Total accuracy: 7.51 %   Semantic accuracy: 7.51 %   Syntactic accuracy: -nan %
+capital-world:
+ACCURACY TOP1: 3.51 %  (51 / 1452)
+Total accuracy: 4.55 %   Semantic accuracy: 4.55 %   Syntactic accuracy: -nan %
+currency:
+ACCURACY TOP1: 1.49 %  (4 / 268)
+Total accuracy: 4.18 %   Semantic accuracy: 4.18 %   Syntactic accuracy: -nan %
+city-in-state:
+ACCURACY TOP1: 5.35 %  (84 / 1571)
+Total accuracy: 4.66 %   Semantic accuracy: 4.66 %   Syntactic accuracy: -nan %
+family:
+ACCURACY TOP1: 14.71 %  (45 / 306)
+Total accuracy: 5.41 %   Semantic accuracy: 5.41 %   Syntactic accuracy: -nan %
+gram1-adjective-to-adverb:
+ACCURACY TOP1: 3.17 %  (24 / 756)
+Total accuracy: 5.06 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 3.17 %
+gram2-opposite:
+ACCURACY TOP1: 3.92 %  (12 / 306)
+Total accuracy: 5.00 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 3.39 %
+gram3-comparative:
+ACCURACY TOP1: 6.03 %  (76 / 1260)
+Total accuracy: 5.20 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 4.82 %
+gram4-superlative:
+ACCURACY TOP1: 2.77 %  (14 / 506)
+Total accuracy: 5.02 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 4.46 %
+gram5-present-participle:
+ACCURACY TOP1: 10.18 %  (101 / 992)
+Total accuracy: 5.67 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 5.94 %
+gram6-nationality-adjective:
+ACCURACY TOP1: 24.36 %  (334 / 1371)
+Total accuracy: 8.42 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 10.81 %
+gram7-past-tense:
+ACCURACY TOP1: 6.76 %  (90 / 1332)
+Total accuracy: 8.22 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 9.98 %
+gram8-plural:
+ACCURACY TOP1: 6.55 %  (65 / 992)
+Total accuracy: 8.07 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 9.53 %
+gram9-plural-verbs:
+ACCURACY TOP1: 3.54 %  (23 / 650)
+Total accuracy: 7.83 %   Semantic accuracy: 5.41 %   Syntactic accuracy: 9.05 %
+Questions seen / total: 12268 19544   62.77 %
+
+-----
+: Command
+time ./bin/single2vec -train text8 -output ./output/2.vectors.bin -cbow 1 -size 200 -window 8 -negative 0 -hs 1 -sample 1e-4 -threads 20 -binary 1 -iter 15
+
+: Time
+Alpha: 0.000005  Progress: 100.11%  Words/thread/sec: 184.11k
+real    22m53.685s
+user    22m45.949s
+sys     0m1.645s
+
+: Distance
+Enter word or sentence (EXIT to break): apple
+
+Word: apple  Position in vocabulary: 1221
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                         macintosh        0.751266
+                                             amiga        0.746673
+                                           powerpc        0.743384
+                                              macs        0.743255
+                                               ibm        0.716201
+                                           itanium        0.714359
+                                         commodore        0.707166
+                                                pc        0.703122
+                                            compaq        0.696264
+                                              apis        0.693055
+                                             atari        0.686400
+                                        compatible        0.685319
+                                         workbench        0.672406
+                                         platforms        0.668794
+                                           console        0.668693
+                                         mainframe        0.668307
+                                      discontinued        0.667862
+                                     minicomputers        0.667429
+                                           windows        0.666308
+                                         hypercard        0.664383
+                                            clones        0.662379
+                                          platform        0.661435
+                                          hardware        0.658768
+                                               pcs        0.657382
+                                              beos        0.656547
+                                            amigas        0.656462
+                                               vms        0.656357
+                                          emulator        0.654780
+                                           scratch        0.654113
+                                         computers        0.653471
+                                     microcomputer        0.653103
+                                               pda        0.652947
+                                               trs        0.651604
+                                          longhorn        0.651330
+                                           product        0.648254
+                                      workstations        0.646007
+                                                os        0.644612
+                                              imac        0.644168
+                                              unix        0.643931
+                                             sparc        0.643654
+Enter word or sentence (EXIT to break): france
+
+Word: france  Position in vocabulary: 303
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                           belgium        0.822980
+                                             spain        0.800581
+                                             italy        0.799730
+                                       netherlands        0.771286
+                                            sweden        0.747223
+                                        luxembourg        0.739861
+                                           germany        0.734011
+                                       switzerland        0.729641
+                                           denmark        0.704383
+                                             japan        0.704201
+                                           england        0.690731
+                                            norway        0.683007
+                                           austria        0.678848
+                                            russia        0.677568
+                                           britain        0.663417
+                                             paris        0.658826
+                                            canada        0.653512
+                                           hungary        0.652744
+                                       scandinavia        0.647498
+                                          portugal        0.646509
+                                           commune        0.630143
+                                         partement        0.629374
+                                                in        0.626496
+                                            french        0.622074
+                                            europe        0.620317
+                                                uk        0.613445
+                                                et        0.612246
+                                            alsace        0.603886
+                                          brittany        0.601940
+                                               usa        0.601050
+                                             montr        0.600503
+                                           jacques        0.599335
+                                                de        0.598519
+                                             marie        0.597742
+                                           imports        0.595906
+                                             crick        0.595050
+                                         elsewhere        0.593729
+                                           outside        0.593056
+                                               and        0.586053
+                                         excluding        0.585836
+
+: Analogy
+capital-common-countries:
+ACCURACY TOP1: 34.98 %  (177 / 506)
+Total accuracy: 34.98 %   Semantic accuracy: 34.98 %   Syntactic accuracy: -nan %
+capital-world:
+ACCURACY TOP1: 12.81 %  (186 / 1452)
+Total accuracy: 18.54 %   Semantic accuracy: 18.54 %   Syntactic accuracy: -nan %
+currency:
+ACCURACY TOP1: 1.12 %  (3 / 268)
+Total accuracy: 16.44 %   Semantic accuracy: 16.44 %   Syntactic accuracy: -nan %
+city-in-state:
+ACCURACY TOP1: 9.10 %  (143 / 1571)
+Total accuracy: 13.41 %   Semantic accuracy: 13.41 %   Syntactic accuracy: -nan %
+family:
+ACCURACY TOP1: 21.24 %  (65 / 306)
+Total accuracy: 13.99 %   Semantic accuracy: 13.99 %   Syntactic accuracy: -nan %
+gram1-adjective-to-adverb:
+ACCURACY TOP1: 7.67 %  (58 / 756)
+Total accuracy: 13.01 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 7.67 %
+gram2-opposite:
+ACCURACY TOP1: 7.84 %  (24 / 306)
+Total accuracy: 12.70 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 7.72 %
+gram3-comparative:
+ACCURACY TOP1: 16.27 %  (205 / 1260)
+Total accuracy: 13.40 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 12.36 %
+gram4-superlative:
+ACCURACY TOP1: 5.53 %  (28 / 506)
+Total accuracy: 12.83 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 11.14 %
+gram5-present-participle:
+ACCURACY TOP1: 8.97 %  (89 / 992)
+Total accuracy: 12.34 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 10.58 %
+gram6-nationality-adjective:
+ACCURACY TOP1: 38.22 %  (524 / 1371)
+Total accuracy: 16.16 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 17.88 %
+gram7-past-tense:
+ACCURACY TOP1: 13.59 %  (181 / 1332)
+Total accuracy: 15.84 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 17.00 %
+gram8-plural:
+ACCURACY TOP1: 17.54 %  (174 / 992)
+Total accuracy: 15.98 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 17.07 %
+gram9-plural-verbs:
+ACCURACY TOP1: 8.00 %  (52 / 650)
+Total accuracy: 15.56 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 16.35 %
+Questions seen / total: 12268 19544   62.77 %

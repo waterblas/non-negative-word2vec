@@ -1,0 +1,147 @@
+: Command
+time ./baseline/word2vec -train text8 -output ./output/5.vectors.bin -cbow 1 -size 200 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 15
+
+: Time
+Alpha: 0.000005  Progress: 100.10%  Words/thread/sec: 85.52k
+real    49m11.928s
+user    48m57.629s
+sys     0m2.365s
+
+: Distance
+Enter word or sentence (EXIT to break): apple
+
+Word: apple  Position in vocabulary: 1221
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                         macintosh        0.680375
+                                              iigs        0.601351
+                                              imac        0.595871
+                                        appleworks        0.574755
+                                          performa        0.555263
+                                         quickdraw        0.544041
+                                         hypercard        0.541389
+                                              ipod        0.535913
+                                             amiga        0.532461
+                                             ibook        0.526157
+                                                os        0.525796
+                                          amigaone        0.519356
+                                            raskin        0.511922
+                                       macintoshes        0.507478
+                                           wozniak        0.500619
+                                              macs        0.494233
+                                               trs        0.493107
+                                           amigaos        0.489807
+                                          mcintosh        0.488807
+                                            compaq        0.487747
+                                         microsoft        0.485559
+                                            laptop        0.484948
+                                          visicalc        0.484676
+                                         commodore        0.480983
+                                            amigas        0.478024
+                                             intel        0.475317
+                                               iic        0.474400
+                                                pc        0.466549
+                                              geos        0.464386
+                                            prodos        0.463368
+                                               iie        0.462009
+                                               axp        0.461958
+                                               msx        0.461281
+                                      preinstalled        0.461088
+                                               jef        0.458316
+                                             atari        0.455416
+                                            claris        0.452730
+                                               ibm        0.451986
+                                               mac        0.451176
+                                           desktop        0.449815
+Enter word or sentence (EXIT to break): france
+
+Word: france  Position in vocabulary: 303
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                             spain        0.683067
+                                             italy        0.618444
+                                            french        0.609478
+                                           commune        0.587003
+                                           germany        0.586734
+                                           belgium        0.583863
+                                          provence        0.577866
+                                       netherlands        0.566707
+                                          baudouin        0.559564
+                                            alsace        0.549486
+                                             paris        0.548799
+                                         huguenots        0.544878
+                                            calais        0.544101
+                                            nantes        0.534135
+                                             loire        0.533356
+                                        universite        0.532314
+                                         partement        0.530299
+                                          portugal        0.529735
+                                          grenoble        0.529102
+                                         marseille        0.521808
+                                         cherbourg        0.521443
+                                         normandie        0.518087
+                                          toulouse        0.513915
+                                             napol        0.512152
+                                     fontainebleau        0.506889
+                                          brittany        0.506555
+                                           ferrand        0.503757
+                                             marne        0.499574
+                                            russia        0.497852
+                                          normandy        0.497323
+                                              metz        0.496138
+                                           picardy        0.492030
+                                       switzerland        0.491527
+                                          touraine        0.490278
+                                           britain        0.490103
+                                         aquitaine        0.489769
+                                          philippe        0.488117
+                                             cedes        0.487582
+                                          belgians        0.487475
+                                           denmark        0.485742
+
+: Analogy
+capital-common-countries:
+ACCURACY TOP1: 82.41 %  (417 / 506)
+Total accuracy: 82.41 %   Semantic accuracy: 82.41 %   Syntactic accuracy: -nan %
+capital-world:
+ACCURACY TOP1: 61.23 %  (889 / 1452)
+Total accuracy: 66.70 %   Semantic accuracy: 66.70 %   Syntactic accuracy: -nan %
+currency:
+ACCURACY TOP1: 25.00 %  (67 / 268)
+Total accuracy: 61.68 %   Semantic accuracy: 61.68 %   Syntactic accuracy: -nan %
+city-in-state:
+ACCURACY TOP1: 48.50 %  (762 / 1571)
+Total accuracy: 56.23 %   Semantic accuracy: 56.23 %   Syntactic accuracy: -nan %
+family:
+ACCURACY TOP1: 75.82 %  (232 / 306)
+Total accuracy: 57.69 %   Semantic accuracy: 57.69 %   Syntactic accuracy: -nan %
+gram1-adjective-to-adverb:
+ACCURACY TOP1: 17.06 %  (129 / 756)
+Total accuracy: 51.37 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 17.06 %
+gram2-opposite:
+ACCURACY TOP1: 20.59 %  (63 / 306)
+Total accuracy: 49.55 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 18.08 %
+gram3-comparative:
+ACCURACY TOP1: 65.48 %  (825 / 1260)
+Total accuracy: 52.67 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 43.80 %
+gram4-superlative:
+ACCURACY TOP1: 39.33 %  (199 / 506)
+Total accuracy: 51.70 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 43.00 %
+gram5-present-participle:
+ACCURACY TOP1: 39.72 %  (394 / 992)
+Total accuracy: 50.20 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 42.15 %
+gram6-nationality-adjective:
+ACCURACY TOP1: 86.07 %  (1180 / 1371)
+Total accuracy: 55.49 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 53.75 %
+gram7-past-tense:
+ACCURACY TOP1: 38.14 %  (508 / 1332)
+Total accuracy: 53.31 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 50.56 %
+gram8-plural:
+ACCURACY TOP1: 67.14 %  (666 / 992)
+Total accuracy: 54.49 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 52.75 %
+gram9-plural-verbs:
+ACCURACY TOP1: 38.00 %  (247 / 650)
+Total accuracy: 53.62 %   Semantic accuracy: 57.69 %   Syntactic accuracy: 51.57 %
+Questions seen / total: 12268 19544   62.77 %

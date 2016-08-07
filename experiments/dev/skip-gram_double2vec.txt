@@ -1,0 +1,297 @@
+: Command
+time ./bin/double2vec -train text8 -output ./output/8.vectors.bin -cbow 0 -size 200 -window 10 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 1 -iter 5
+
+: Time
+Alpha: 0.000002  Progress: 100.11%  Words/thread/sec: 8.42k
+real    166m18.189s
+user    165m36.731s
+sys     0m2.155s
+
+: Distance
+Enter word or sentence (EXIT to break): apple
+
+Word: apple  Position in vocabulary: 1221
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                             blame        1.000000
+                                             slice        1.000000
+                                         murderous        1.000000
+                                             kemal        1.000000
+                                             nonce        1.000000
+                                            minoru        1.000000
+                                           ascanio        1.000000
+                                               osb        1.000000
+                                            defend        0.658918
+                                       predictable        0.658918
+                                   phosphorylation        0.658918
+                                              linz        0.658918
+                                          bungalow        0.658918
+                                         bumblebee        0.658918
+                                         birkeland        0.658918
+                                        inexorable        0.658918
+                                            segway        0.658918
+                                           retired        0.655929
+                                        instructed        0.655929
+                                         minuscule        0.655929
+                                       instructing        0.655929
+                                           disobey        0.655929
+                                          songbook        0.655929
+                                            ckisch        0.655929
+                                               aeg        0.655929
+                                             shean        0.655929
+                                         continuum        0.652153
+                                           daimler        0.652153
+                                            pranks        0.652153
+                                        falciparum        0.652153
+                                             moire        0.652153
+                                           dhahran        0.652153
+                                              muso        0.652153
+                                      redundancies        0.652153
+                                             billy        0.650929
+                                           pitches        0.650929
+                                             phyla        0.650929
+                                           cowdery        0.650929
+                                          norsemen        0.650929
+                                            seaton        0.650929
+Enter word or sentence (EXIT to break): france
+
+Word: france  Position in vocabulary: 303
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                           exploit        1.000000
+                                        gladiators        1.000000
+                                         thuringia        1.000000
+                                          trioxide        1.000000
+                                       imperfectly        1.000000
+                                          espresso        1.000000
+                                       bainimarama        1.000000
+                                           riddick        1.000000
+                                           placing        0.689685
+                                          advisors        0.689685
+                                              guez        0.689685
+                                           monomer        0.689685
+                                       typographic        0.689685
+                                             ocaml        0.689685
+                                             bonne        0.689685
+                                              kuni        0.689685
+                                          sublists        0.689685
+                                            mongol        0.679008
+                                      identifiable        0.679008
+                                         wadsworth        0.679008
+                                               cde        0.679008
+                                            biloxi        0.679008
+                                           gutrune        0.679008
+                                         vocations        0.679008
+                                           ithacan        0.679008
+                                     homosexuality        0.677483
+                                               lan        0.677483
+                                            racers        0.677483
+                                           gifford        0.677483
+                                            laguna        0.677483
+                                     shapeshifting        0.677483
+                                 heteronormativity        0.677483
+                                           oversea        0.677483
+                                      chauvinistic        0.677483
+                                            plural        0.671048
+                                          syracuse        0.671048
+                                        marguerite        0.671048
+                                            wiping        0.671048
+                                               mpc        0.671048
+                                          theodicy        0.671048
+
+
+: Analogy
+capital-common-countries:
+ACCURACY TOP1: 0.00 %  (0 / 506)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+capital-world:
+ACCURACY TOP1: 0.00 %  (0 / 1452)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+currency:
+ACCURACY TOP1: 0.00 %  (0 / 268)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+city-in-state:
+ACCURACY TOP1: 0.00 %  (0 / 1571)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+family:
+ACCURACY TOP1: 0.00 %  (0 / 306)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+gram1-adjective-to-adverb:
+ACCURACY TOP1: 0.00 %  (0 / 756)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram2-opposite:
+ACCURACY TOP1: 0.00 %  (0 / 306)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram3-comparative:
+ACCURACY TOP1: 0.00 %  (0 / 1260)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram4-superlative:
+ACCURACY TOP1: 0.00 %  (0 / 506)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram5-present-participle:
+ACCURACY TOP1: 0.00 %  (0 / 992)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram6-nationality-adjective:
+ACCURACY TOP1: 0.00 %  (0 / 1371)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram7-past-tense:
+ACCURACY TOP1: 0.00 %  (0 / 1332)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram8-plural:
+ACCURACY TOP1: 0.00 %  (0 / 992)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram9-plural-verbs:
+ACCURACY TOP1: 0.00 %  (0 / 650)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+Questions seen / total: 12268 19544   62.77 %
+
+-----
+: Command
+time ./bin/double2vec -train text8 -output ./output/9.vectors.bin -cbow 0 -size 200 -window 10 -negative 0 -hs 1 -sample 1e-4 -threads 20 -binary 1 -iter 5
+
+: Time
+Alpha: 0.000002  Progress: 100.10%  Words/thread/sec: 23.66k
+real    59m12.112s
+user    58m59.049s
+sys     0m1.128s
+
+: Distance
+Enter word or sentence (EXIT to break): apple
+
+Word: apple  Position in vocabulary: 1221
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                             blame        1.000000
+                                             slice        1.000000
+                                         murderous        1.000000
+                                             kemal        1.000000
+                                             nonce        1.000000
+                                            minoru        1.000000
+                                           ascanio        1.000000
+                                               osb        1.000000
+                                            defend        0.658918
+                                       predictable        0.658918
+                                   phosphorylation        0.658918
+                                              linz        0.658918
+                                          bungalow        0.658918
+                                         bumblebee        0.658918
+                                         birkeland        0.658918
+                                        inexorable        0.658918
+                                            segway        0.658918
+                                           retired        0.655929
+                                        instructed        0.655929
+                                         minuscule        0.655929
+                                       instructing        0.655929
+                                           disobey        0.655929
+                                          songbook        0.655929
+                                            ckisch        0.655929
+                                               aeg        0.655929
+                                             shean        0.655929
+                                         continuum        0.652153
+                                           daimler        0.652153
+                                            pranks        0.652153
+                                        falciparum        0.652153
+                                             moire        0.652153
+                                           dhahran        0.652153
+                                              muso        0.652153
+                                      redundancies        0.652153
+                                             billy        0.650929
+                                           pitches        0.650929
+                                             phyla        0.650929
+                                           cowdery        0.650929
+                                          norsemen        0.650929
+                                            seaton        0.650929
+Enter word or sentence (EXIT to break): france
+
+Word: france  Position in vocabulary: 303
+
+                                              Word       Cosine distance
+------------------------------------------------------------------------
+                                           exploit        1.000000
+                                        gladiators        1.000000
+                                         thuringia        1.000000
+                                          trioxide        1.000000
+                                       imperfectly        1.000000
+                                          espresso        1.000000
+                                       bainimarama        1.000000
+                                           riddick        1.000000
+                                           placing        0.689685
+                                          advisors        0.689685
+                                              guez        0.689685
+                                           monomer        0.689685
+                                       typographic        0.689685
+                                             ocaml        0.689685
+                                             bonne        0.689685
+                                              kuni        0.689685
+                                          sublists        0.689685
+                                            mongol        0.679008
+                                      identifiable        0.679008
+                                         wadsworth        0.679008
+                                               cde        0.679008
+                                            biloxi        0.679008
+                                           gutrune        0.679008
+                                         vocations        0.679008
+                                           ithacan        0.679008
+                                     homosexuality        0.677483
+                                               lan        0.677483
+                                            racers        0.677483
+                                           gifford        0.677483
+                                            laguna        0.677483
+                                     shapeshifting        0.677483
+                                 heteronormativity        0.677483
+                                           oversea        0.677483
+                                      chauvinistic        0.677483
+                                            plural        0.671048
+                                          syracuse        0.671048
+                                        marguerite        0.671048
+                                            wiping        0.671048
+                                               mpc        0.671048
+                                          theodicy        0.671048
+
+: Analogy
+capital-common-countries:
+ACCURACY TOP1: 0.00 %  (0 / 506)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+capital-world:
+ACCURACY TOP1: 0.00 %  (0 / 1452)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+currency:
+ACCURACY TOP1: 0.00 %  (0 / 268)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+city-in-state:
+ACCURACY TOP1: 0.00 %  (0 / 1571)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+family:
+ACCURACY TOP1: 0.00 %  (0 / 306)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: -nan %
+gram1-adjective-to-adverb:
+ACCURACY TOP1: 0.00 %  (0 / 756)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram2-opposite:
+ACCURACY TOP1: 0.00 %  (0 / 306)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram3-comparative:
+ACCURACY TOP1: 0.00 %  (0 / 1260)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram4-superlative:
+ACCURACY TOP1: 0.00 %  (0 / 506)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram5-present-participle:
+ACCURACY TOP1: 0.00 %  (0 / 992)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram6-nationality-adjective:
+ACCURACY TOP1: 0.00 %  (0 / 1371)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram7-past-tense:
+ACCURACY TOP1: 0.00 %  (0 / 1332)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram8-plural:
+ACCURACY TOP1: 0.00 %  (0 / 992)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+gram9-plural-verbs:
+ACCURACY TOP1: 0.00 %  (0 / 650)
+Total accuracy: 0.00 %   Semantic accuracy: 0.00 %   Syntactic accuracy: 0.00 %
+Questions seen / total: 12268 19544   62.77 %
