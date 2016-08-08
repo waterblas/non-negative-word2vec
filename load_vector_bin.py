@@ -57,6 +57,6 @@ if __name__ == '__main__':
     import sys
     if len(sys.argv) < 2:
         print("Missing Parameters of binary filename")
-    #to_text(sys.argv[1], sys.argv[2])
-    to_pickle(sys.argv[1], sys.argv[2])
+    to_text(sys.argv[1], sys.argv[2])
+    #to_pickle(sys.argv[1], sys.argv[2])
 
