@@ -40,43 +40,29 @@ gallopin 0.001380 0.033212 0.007252 0.031673 0.000002 0.004911 0.000006 0.000006
 ### Mikolov's model 
 
 **CBOW**
+<img src="http://latex.codecogs.com/gif.latex?P(v_{w}|v_{c}) = \frac{exp(v_{w}^{T}v_{c})}{\sum_{k \in V}{exp(v_{k}^{T}v_{c})}}" />
 
-![cbow_Mikolov](http://7xkrbx.com1.z0.glb.clouddn.com/github/cbow_Mikolov.png)
-
-```
-$$ P(v_{w}|v_{c}) = \frac{exp(v_{w}^{T}v_{c})}{\sum_{k \in V}{exp(v_{k}^{T}v_{c})}}$$
-$$ \sum_{(c,w) \in D}{\log{P(v_{w}|v_{c})}}$$
-```
+<img src="http://latex.codecogs.com/gif.latex?\sum_{(c,w) \in D}{\log{P(v_{w}|v_{c})}}" />
 
 **Skip-gram**
 
-![skip-gram_Mikolov](http://7xkrbx.com1.z0.glb.clouddn.com/github/skip-gram_Mikolov.png)
+<img src="http://latex.codecogs.com/gif.latex?P(v_{i}|v_{j}) = \frac{exp(v_{i}^{T}v_{j})}{\sum_{k \in V}{exp(v_{k}^{T}v_{j})}}" />
 
-```
-$$ P(v_{i}|v_{j}) = \frac{exp(v_{i}^{T}v_{j})}{\sum_{k \in V}{exp(v_{k}^{T}v_{j})}}$$
-$$ \sum_{(i,c) \in D} \sum_{v_j \in c} {\log{P(v_{i}|v_{j})}}$$
-```
+<img src="http://latex.codecogs.com/gif.latex?\sum_{(i,c) \in D} \sum_{v_j \in c} {\log{P(v_{i}|v_{j})}}" />
+
 ### Non-negative model
 
 **CBOW**
 
-![cbow_mine](http://7xkrbx.com1.z0.glb.clouddn.com/github/cbow_mine.png)
+<img src="http://latex.codecogs.com/gif.latex?P(v_{w}|v_{c}) = \frac{exp(v_{w}^{T}(v_{c}. v_{c}))}{\sum_{k \in V}{exp(v_{k}^{T}(v_{c}. v_{c}))}}" />
 
-
-```
-$$ P(v_{w}|v_{c}) = \frac{exp(v_{w}^{T}(v_{c}. v_{c}))}{\sum_{k \in V}{exp(v_{k}^{T}(v_{c}. v_{c}))}}$$
-$$ embedding(w) = v_c.v_c $$
-```
-
+<img src="http://latex.codecogs.com/gif.latex?embedding(w) = v_c.v_c" />
 
 **Skip-gram**
 
-![skip-gram_mine](http://7xkrbx.com1.z0.glb.clouddn.com/github/skip-gram_mine.png)
+<img src="http://latex.codecogs.com/gif.latex?P(v_{i}|v_{j}) = \frac{exp(v_{i}^{T}(v_{j}. v_{j}))}{\sum_{k \in V}{exp(v_{k}^{T}(v_{j}. v_{j}))}}" />
 
-```
-$$ P(v_{i}|v_{j}) = \frac{exp(v_{i}^{T}(v_{j}. v_{j}))}{\sum_{k \in V}{exp(v_{k}^{T}(v_{j}. v_{j}))}}$$
-$$ embedding(j) = v_j .v_j $$
-```
+<img src="http://latex.codecogs.com/gif.latex?embedding(j) = v_j .v_j" />
 
 ## Experiment
 
@@ -159,12 +145,9 @@ Total accuracy: 13.01 %   Semantic accuracy: 13.99 %   Syntactic accuracy: 7.67 
 
 Dev double inner product method. run `./demo-double2vec.sh`
 
-![dev-double2vec](http://7xkrbx.com1.z0.glb.clouddn.com/github/dev-double2vec.png)
+<img src="http://latex.codecogs.com/gif.latex?P(v_{i}|v_{j}) = \frac{exp((v_{i}.v_{i})^{T}(v_{j}. v_{j}))}{\sum_{k \in V}{exp((v_{k}.v_{k})^{T}(v_{j}. v_{j}))}}" />
 
-```
-$$ P(v_{i}|v_{j}) = \frac{exp((v_{i}.v_{i})^{T}(v_{j}. v_{j}))}{\sum_{k \in V}{exp((v_{k}.v_{k})^{T}(v_{j}. v_{j}))}}$$
-$$ embedding(j) = v_j .v_j $$
-```
+<img src="http://latex.codecogs.com/gif.latex?embedding(w) = v_j.v_j" />
 
 Though I update the code to implement it, the result is not good. ***Not recommended use now*** . the result of experiment is saved in `experiment/double2vec.txt` file.
 
