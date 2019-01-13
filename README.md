@@ -41,7 +41,7 @@ gallopin 0.001380 0.033212 0.007252 0.031673 0.000002 0.004911 0.000006 0.000006
 
 **CBOW**
 
-![](http://latex.codecogs.com/gif.latex?P(v_{w}|v_{c})=\\frac{exp(v_{w}^{T}v_{c})}{\\sum_{k\\in\ V}{exp(v_{k}^{T}v_{c})}})
+![cbow](http://latex.codecogs.com/gif.latex?P(v_{w}|v_{c})=\\frac{exp(v_{w}^{T}v_{c})}{\\sum_{k\\in\ V}{exp(v_{k}^{T}v_{c})}})
 
 <img src="http://latex.codecogs.com/gif.latex?\sum_{(c,w) \in D}{\log{P(v_{w}|v_{c})}}" />
 
